@@ -1,1 +1,18 @@
-<p>product-card works!</p>
+<mat-card class="product-card">
+
+    <div class="card-content">
+          
+        <div class="left">
+            <h3 class="title">{{ item.title }}</h3>
+            <p class="category">{{ item.category }}</p>
+            <p class="desc">
+              {{ item.description }}
+            </p>
+        </div>
+
+        <div class="right">
+            <img [src]="item.image" />
+        </div>
+
+    </div>
+</mat-card>

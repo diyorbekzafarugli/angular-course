@@ -2,25 +2,7 @@
   <h1 class="head-title">Products List</h1>
   <div class="product-grid">
     @for (item of productList(); track item.id) {
-      <mat-card class="product-card">
-
-        <div class="card-content">
-          
-          <div class="left">
-            <h3 class="title">{{ item.title }}</h3>
-            <p class="category">{{ item.category }}</p>
-            <p class="desc">
-              {{ item.description }}
-            </p>
-          </div>
-
-          <div class="right">
-            <img [src]="item.image" />
-          </div>
-
-        </div>
-
-      </mat-card>
+      <app-product-card [item]="item"></app-product-card>
     }
   </div>
 </div>
