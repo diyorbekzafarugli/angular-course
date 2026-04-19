@@ -1,8 +1,26 @@
-<p>product-list works!</p>
+<div class="container">
+  <h1 class="head-title">Products List</h1>
+  <div class="product-grid">
+    @for (item of productList(); track item.id) {
+      <mat-card class="product-card">
 
+        <div class="card-content">
+          
+          <div class="left">
+            <h3 class="title">{{ item.title }}</h3>
+            <p class="category">{{ item.category }}</p>
+            <p class="desc">
+              {{ item.description }}
+            </p>
+          </div>
 
-<ul>
-    @for (product of productList(); track product.id) {
-        <li>{{ product.title }}</li>
+          <div class="right">
+            <img [src]="item.image" />
+          </div>
+
+        </div>
+
+      </mat-card>
     }
-</ul>
+  </div>
+</div>
